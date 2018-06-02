@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button icon-only navPop>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align:center">打开机械装置</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div style="text-align: center; margin-left: 10px; margin-right: 10px; height: 50px">
+    <button ion-button block light (click)="scanDevice()">
+      发现周围设备
+    </button>
+  </div>
+  <ion-list *ngFor="let device of devices">
+    <ion-card>
+      <ion-row>
+        <ion-col col-8 style="margin-top: 5px; margin-bottom: 5px">
+          <p>设备名:{{device.name}}</p>
+          <p>设备ID:{{device.id}}</p>
+          <p>设备信号强度:{{device.rssi}}</p>
+        </ion-col>
+        <ion-col col-4>
+          <button ion-button block (click)="openDevice(device)" style="margin-bottom: 15px; margin-top: 15px">开启</button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+</ion-content>

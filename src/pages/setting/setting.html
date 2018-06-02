@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>设置</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-color">
+  <ion-list class="top-list">
+    <button ion-item>
+      <ion-avatar item-left style="size: auto">
+        <ion-img src="assets/imgs/huaji.jpg"></ion-img>
+      </ion-avatar>
+      <h2>{{UserName}}</h2>
+      <p>账号：{{UserAccount}}</p>
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="call"></ion-icon>
+      电话号码：{{UserPhoneNumber}}
+    </button>
+    <button ion-item>
+      <ion-icon name="mail"></ion-icon>
+      邮箱：{{UserEmail}}
+    </button>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item>
+      <ion-icon name="appstore"></ion-icon>
+      版本号
+      <span item-end>V1.0</span>
+    </button>
+    <button ion-item (click)="getinfo()">
+      <ion-icon name="alert"></ion-icon>
+      关于
+    </button>
+  </ion-list>
+
+  <div style="text-align: center; margin-left: 30px; margin-right: 30px;margin-top: 30px;">
+    <button ion-button block (click)="logOut()">
+      退出登录
+    </button>
+  </div>
+</ion-content>

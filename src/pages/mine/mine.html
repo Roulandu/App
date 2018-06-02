@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar no-border-bottom class="mywinebavbar">
+    <ion-title>我的酒库</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top class="mywinetoolbar">
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        类型
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        酒量
+      </ion-segment-button>
+      <ion-segment-button value="ducklings">
+        使用
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding class="minecontent">
+
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchCase="'puppies'">
+      <div id="box1">
+        <ion-card button id="block1" *ngFor="let item of typeList" (click)="getInfoOfProduct(item.type)">
+          <img [src]="item?.src">
+          <p style="text-align: center">{{item?.type}}</p>
+        </ion-card>
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'kittens'">
+      <div id="box2">
+        <ion-card button id="block2" *ngFor="let item of capacityList" (click)="getInfoOfProduct(item.type)">
+          <img [src]="item?.src">
+          <p style="text-align: center">{{item?.capacity}}</p>
+        </ion-card>
+      </div>
+    </ion-list>
+    <ion-list *ngSwitchCase="'ducklings'">
+      <div id="box3">
+        <ion-card button id="block3" *ngFor="let item of conditionList" (click)="getInfoOfProduct(item.type)">
+          <img [src]="item?.src">
+          <p style="text-align: center">{{item?.used}}</p>
+        </ion-card>
+      </div>
+    </ion-list>
+  </div>
+
+</ion-content>

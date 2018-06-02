@@ -1,0 +1,68 @@
+page-mine {
+  .toolbar-title-md {
+    text-align: center;
+  }
+
+  .scroll-content {
+    padding: 0 ;
+  }
+
+  .mywinebavbar {
+    margin-bottom: -17px;
+  }
+
+  .mywinetoolbar {
+    margin-top: -17px;
+  }
+
+  #box1 {
+    width: calc(100%);
+  }
+
+  #block1 {
+    float: left;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 10px;
+    //height: 120px;
+    width: calc(90% / 3);
+    margin-left: calc(10% / 6);
+    margin-bottom: calc(10% / 6);
+    margin-right: calc(10% / 6);
+    margin-top: calc(10% / 6);
+  }
+
+  #box2 {
+    width: calc(100%);
+  }
+
+  #block2 {
+    float: left;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 10px;
+    //height: 120px;
+    width: calc(90% / 3);
+    margin-left: calc(10% / 6);
+    margin-bottom: calc(10% / 6);
+    margin-right: calc(10% / 6);
+    margin-top: calc(10% / 6);
+  }
+
+  #box3 {
+    width: calc(100%);
+  }
+
+  #block3 {
+    float: left;
+    background-color: #ffffff;
+    border: 2px;
+    border-radius: 10px;
+    //height: 120px;
+    width: calc(90% / 3);
+    margin-left: calc(10% / 6);
+    margin-bottom: calc(10% / 6);
+    margin-right: calc(10% / 6);
+    margin-top: calc(10% / 6);
+  }
+}

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-buttons left>
+      <button ion-button icon-only navPop>
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align:center">防伪溯源</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content scroll="false">
+
+  <div #map id="map_container"></div>
+
+  <ion-list *ngFor="let item of listView">
+    <div class="divider-title">{{item?.date}}</div>
+    <ul class="timeline" *ngFor="let data of item?.detail">
+      <li>
+        <!--<div class="timeline-thumb bg-color-blue timeline-icon">
+        </div>-->
+        <div [class]="data?.color"></div>
+        <div class="timeline-item">
+          <h4>{{data?.name}}</h4>
+          <p>{{data?.describe}}</p>
+          <div class="timeline-stats">
+            <ion-icon name="clock"></ion-icon>
+            {{data?.time}}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ion-list>
+</ion-content>

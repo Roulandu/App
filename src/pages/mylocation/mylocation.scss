@@ -1,0 +1,15 @@
+page-mylocation {
+  .BMap_cpyCtrl {
+    display: none;
+  }
+  .anchorBL {
+    display: none;
+  }
+  #map_location {
+    overflow: hidden;
+    margin: 0;
+    font-family: "微软雅黑";
+    width: 100%;
+    height: 100%;
+  }
+}
